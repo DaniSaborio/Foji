@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-ink-950 text-slate-200 antialiased;
+}
+
+@layer components {
+  /* Superficie estándar Bento: celda de esquinas rectas sobre el fondo LetterGlitch */
+  .card {
+    @apply rounded-none border border-violet-500/25 bg-ink-900/85 backdrop-blur-md;
+  }
+  .card-hover {
+    @apply transition hover:border-brand-500/60 hover:shadow-neon;
+  }
+
+  .bento-grid {
+    @apply grid gap-3;
+  }
+  .bento-cell {
+    @apply relative rounded-none border border-violet-500/25 bg-ink-900/85 p-5 backdrop-blur-md;
+  }
+  .bento-cell-interactive {
+    @apply bento-cell transition hover:border-brand-500/60 hover:bg-ink-850/90 hover:shadow-neon;
+  }
+  .bento-tag {
+    @apply font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400;
+  }
+
+  /* Variantes de acento de marca FORGE/SH para celdas Bento */
+  .bento-cyan {
+    @apply border-brand-500/35 shadow-[inset_0_2px_0_0_#00D2FF];
+  }
+  .bento-violet {
+    @apply border-violet-500/40 shadow-[inset_0_2px_0_0_#7B2CBF];
+  }
+  .bento-magenta {
+    @apply border-pink-500/40 shadow-[inset_0_2px_0_0_#C81DF5];
+  }
+  .bento-mint {
+    @apply border-forge-mint/35 shadow-[inset_0_2px_0_0_#14F1C9];
+  }
+  .bento-crucible {
+    @apply border-forge-orange/40 shadow-[inset_0_2px_0_0_#FF7B1C];
+  }
+  .bento-gold {
+    @apply border-forge-gold/40 shadow-[inset_0_2px_0_0_#FFD13B];
+  }
+
+  /* Barra superior con el espectro completo de la marca FORGE/SH */
+  .forge-bar {
+    @apply h-0.5 w-full bg-forge-spectrum;
+  }
+
+  /* Botones — sin redondeo de esquinas */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-none px-4 py-2 text-sm font-semibold uppercase tracking-wider transition disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn border border-brand-400/60 bg-brand-gradient text-white shadow-neon hover:brightness-110;
+  }
+  .btn-crucible {
+    @apply btn border border-forge-gold/60 bg-crucible-gradient text-ink-950 shadow-neon-crucible hover:brightness-110;
+  }
+  .btn-ghost {
+    @apply btn border border-violet-500/30 bg-violet-500/10 text-slate-200 hover:border-brand-500/60 hover:bg-brand-500/15 hover:text-white;
+  }
+  .btn-danger {
+    @apply btn border border-pink-500/40 bg-pink-500/10 text-pink-400 hover:bg-pink-500/20;
+  }
+
+  /* Inputs — sin redondeo de esquinas */
+  .input {
+    @apply w-full rounded-none border border-violet-500/25 bg-ink-950/90 px-3 py-2 text-sm text-slate-100 placeholder-slate-500 outline-none transition focus:border-brand-500/80 focus:ring-1 focus:ring-brand-500/35;
+  }
+  .label {
+    @apply mb-1 block font-mono text-[11px] font-semibold uppercase tracking-widest text-brand-300/80;
+  }
+
+  /* Badges — rectangulares sin border-radius */
+  .badge {
+    @apply inline-flex items-center gap-1.5 rounded-none px-2 py-0.5 font-mono text-[11px] font-semibold uppercase tracking-wider;
+  }
+
+  /* Texto con gradiente de marca */
+  .text-gradient {
+    @apply bg-brand-gradient bg-clip-text text-transparent;
+  }
+  .text-crucible {
+    @apply bg-crucible-gradient bg-clip-text text-transparent;
+  }
+  .heading {
+    @apply text-lg font-bold tracking-tight text-white;
+  }
+}
+
+/* Scrollbar dark — esquinas rectas con gradiente de marca */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #C81DF5 0%, #7B2CBF 50%, #00D2FF 100%);
+  border-radius: 0;
+}
+::-webkit-scrollbar-track {
+  background: rgba(1, 0, 5, 0.8);
+}
