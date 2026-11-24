@@ -1,0 +1,13 @@
+/node_modules
+/.next
+/out
+/.open-next
+/.wrangler
+.env
+.env.local
+.dev.vars
+*.log
+*.tsbuildinfo
+.DS_Store
+cloudflare-env.d.ts
+next-env.d.ts
