@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1785733285301,
+      "tag": "0000_shiny_micromacro",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1785739409417,
+      "tag": "0001_sharp_agent_zero",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1785775182671,
+      "tag": "0002_futuristic_tombstone",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1788396923770,
+      "tag": "0003_free_doctor_doom",
+      "breakpoints": true
+    }
+  ]
+}
